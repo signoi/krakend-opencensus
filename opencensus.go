@@ -130,6 +130,14 @@ type Config struct {
 			MetricPrefix  string            `json:"metric_prefix"`
 			DefaultLabels map[string]string `json:"default_labels"`
 		} `json:"stackdriver"`
+		Ocagent *struct {
+			Address            string            `json:"address"`
+			ServiceName        string            `json:"service_name"`
+			Headers            map[string]string `json:"headers"`
+			Insecure           bool              `json:"insecure"`
+			Reconnection       string            `json:"reconnection"`
+			EnaableCompression bool              `json:"enable_compression"`
+		}
 	} `json:"exporters"`
 }
 

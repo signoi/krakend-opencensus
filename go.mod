@@ -5,6 +5,7 @@ go 1.13
 require (
 	contrib.go.opencensus.io/exporter/aws v0.0.0-20190807220307-c50fb1bd7f21
 	contrib.go.opencensus.io/exporter/jaeger v0.1.0
+	contrib.go.opencensus.io/exporter/ocagent v0.6.0
 	contrib.go.opencensus.io/exporter/prometheus v0.1.0
 	contrib.go.opencensus.io/exporter/stackdriver v0.12.7
 	contrib.go.opencensus.io/exporter/zipkin v0.1.1
@@ -15,4 +16,5 @@ require (
 	github.com/kpacha/opencensus-influxdb v0.0.0-20181102202715-663e2683a27c
 	github.com/openzipkin/zipkin-go v0.2.2
 	go.opencensus.io v0.22.1
+	google.golang.org/grpc v1.22.1
 )
