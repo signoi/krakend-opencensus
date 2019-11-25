@@ -137,7 +137,7 @@ type Config struct {
 			Insecure           bool              `json:"insecure"`
 			Reconnection       string            `json:"reconnection"`
 			EnaableCompression bool              `json:"enable_compression"`
-		}
+		} `json:"ocagent"`
 	} `json:"exporters"`
 }
 
