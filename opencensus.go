@@ -93,6 +93,10 @@ type Config struct {
 	ReportingPeriod int            `json:"reporting_period"`
 	EnabledLayers   *EnabledLayers `json:"enabled_layers"`
 	Exporters       struct {
+		Instana *struct {
+			AgentPort   int    `json:"agentport"`
+			ServiceName string `json:"servicename"`
+		}
 		InfluxDB *struct {
 			Address      string `json:"address"`
 			Username     string `json:"username"`
@@ -135,7 +139,7 @@ type Config struct {
 
 const (
 	ContextKey = "opencensus-request-span"
-	Namespace  = "github_com/devopsfaith/krakend-opencensus"
+	Namespace  = "github_com/signoi/krakend-opencensus"
 )
 
 var (
