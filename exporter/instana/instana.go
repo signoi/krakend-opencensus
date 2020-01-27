@@ -3,6 +3,7 @@ package instana
 import (
 	"context"
 	"errors"
+	"fmt"
 
 	"os"
 
@@ -11,7 +12,7 @@ import (
 )
 
 func init() {
-
+	fmt.Println("initializing instana")
 	opencensus.RegisterExporterFactories(func(ctx context.Context, cfg opencensus.Config) (interface{}, error) {
 		return Exporter(ctx, cfg)
 	})
@@ -27,7 +28,7 @@ func Exporter(ctx context.Context, cfg opencensus.Config) (*siginstana.Exporter,
 	if host == "" {
 		host = "localhost"
 	}
-
+	fmt.Println("instana, exporter")
 	return siginstana.NewExporter(cfg.Exporters.Instana.ServiceName, host, cfg.Exporters.Instana.AgentPort), nil
 
 }
