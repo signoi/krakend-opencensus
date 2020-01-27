@@ -35,30 +35,13 @@
       "reporting_period": 1,
       "enabled_layers": {
         "backend": true,
-        "router": true
+        "router": true,
+        "proxy": true
       },
       "exporters": {
-        "influxdb": {
-          "address": "http://192.168.99.100:8086",
-          "db": "krakend",
-          "timeout": "1s"
-        },
-        "zipkin": {
-          "collector_url": "http://192.168.99.100:9411/api/v2/spans",
-          "service_name": "krakend"
-        },
-        "prometheus": {
-          "port": 9091
-        },
-        "jaeger": {
-          "endpoint": "http://192.168.99.100:14268",
-          "serviceName": "krakend"
-        },
-        "xray": {
-          "version": "Krakend-opencensus",
-          "region": "eu-west-1",
-          "access_key_id": "myaccesskey",
-          "secret_access_key": "mysecretkey"
+        "instana": {
+          "agentport": 42699,
+          "servicename": "api-gateway"
         },
         "logger": {
           "stats": true,

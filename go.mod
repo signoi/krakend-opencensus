@@ -10,7 +10,7 @@ require (
 	contrib.go.opencensus.io/exporter/zipkin v0.1.1
 	github.com/aws/aws-sdk-go v1.28.9
 	github.com/devopsfaith/krakend v1.1.0
-	github.com/devopsfaith/krakend-opencensus v0.0.0-20191125144520-6567e6eb9b06 // indirect
+	github.com/devopsfaith/krakend-opencensus v0.0.0-20191125144520-6567e6eb9b06
 	github.com/gin-gonic/gin v1.1.5-0.20170702092826-d459835d2b07
 	github.com/influxdata/influxdb v1.7.9 // indirect
 	github.com/kpacha/opencensus-influxdb v0.0.0-20181102202715-663e2683a27c

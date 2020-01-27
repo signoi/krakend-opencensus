@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	"fmt"
 	"log"
 	"os"
 	"os/signal"
@@ -11,18 +12,19 @@ import (
 	"github.com/devopsfaith/krakend/config"
 	"github.com/devopsfaith/krakend/logging"
 	"github.com/devopsfaith/krakend/proxy"
+	"github.com/devopsfaith/krakend/router"
 	krakendgin "github.com/devopsfaith/krakend/router/gin"
 	"github.com/devopsfaith/krakend/transport/http/client"
 	"github.com/gin-gonic/gin"
 
+	opencensusgin "github.com/devopsfaith/krakend-opencensus/router/gin"
 	opencensus "github.com/signoi/krakend-opencensus"
 	"github.com/signoi/krakend-opencensus/exporter"
 	_ "github.com/signoi/krakend-opencensus/exporter/influxdb"
+	_ "github.com/signoi/krakend-opencensus/exporter/instana"
 	_ "github.com/signoi/krakend-opencensus/exporter/jaeger"
 	_ "github.com/signoi/krakend-opencensus/exporter/prometheus"
 	_ "github.com/signoi/krakend-opencensus/exporter/zipkin"
-	opencensusgin "github.com/signoi/krakend-opencensus/router/gin"
-	_ "github.com/signoi/opencensus-exporter-instana"
 )
 
 func main() {
@@ -56,7 +58,11 @@ func main() {
 		serviceConfig.Port = *port
 	}
 
-	logger, _ := logging.NewLogger(*logLevel, os.Stdout, "[KRAKEND]")
+	logger, err := logging.NewLogger(*logLevel, os.Stdout, "[KRAKEND]")
+	fmt.Println("error", err)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	// Register stats and trace exporters to export the collected data.
 	{
@@ -78,8 +84,8 @@ func main() {
 		Middlewares:    []gin.HandlerFunc{},
 		Logger:         logger,
 		HandlerFactory: opencensusgin.New(krakendgin.EndpointHandler),
+		RunServer:      router.RunServer,
 	})
 
-	// start the engine
 	routerFactory.NewWithContext(ctx).Run(serviceConfig)
 }

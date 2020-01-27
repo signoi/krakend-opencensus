@@ -12,7 +12,7 @@ import (
 )
 
 func init() {
-	fmt.Println("initializing instana")
+	fmt.Println("><><><><><><><><")
 	opencensus.RegisterExporterFactories(func(ctx context.Context, cfg opencensus.Config) (interface{}, error) {
 		return Exporter(ctx, cfg)
 	})
