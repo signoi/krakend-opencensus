@@ -16,6 +16,6 @@ require (
 	github.com/kpacha/opencensus-influxdb v0.0.0-20181102202715-663e2683a27c
 	github.com/openzipkin/zipkin-go v0.2.2
 	github.com/prometheus/client_golang v1.3.0
-	github.com/signoi/opencensus-exporter-instana v0.0.0-20200127114318-21d1dc518afe
+	github.com/signoi/opencensus-exporter-instana v0.0.0-20200128054629-eab2a41ab718
 	go.opencensus.io v0.22.2
 )
