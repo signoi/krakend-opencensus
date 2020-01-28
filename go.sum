@@ -199,6 +199,10 @@ github.com/signoi/opencensus-exporter-instana v0.0.0-20200128054629-eab2a41ab718
 github.com/signoi/opencensus-exporter-instana v0.0.0-20200128054629-eab2a41ab718/go.mod h1:MA1S2FP0JvOnK4LdhYGRU+wZ+zdR6Cfch4ey/3hiVf8=
 github.com/signoi/opencensus-exporter-instana v0.0.0-20200128062352-48046c3686bf h1:SpOHyiRe9KNJE7oWkrPjjwZZrOG94tt0H1bWg/PcUDY=
 github.com/signoi/opencensus-exporter-instana v0.0.0-20200128062352-48046c3686bf/go.mod h1:MA1S2FP0JvOnK4LdhYGRU+wZ+zdR6Cfch4ey/3hiVf8=
+github.com/signoi/opencensus-exporter-instana v0.0.0-20200128064627-3015245dc01d h1:51d3gv+vNLhUrsdmH4k6rhrEF5IiyncMpGIZpLBUAKw=
+github.com/signoi/opencensus-exporter-instana v0.0.0-20200128064627-3015245dc01d/go.mod h1:MA1S2FP0JvOnK4LdhYGRU+wZ+zdR6Cfch4ey/3hiVf8=
+github.com/signoi/opencensus-exporter-instana v0.0.0-20200128065201-871aca720cf0 h1:KuXqdz/pDYc0nxG/JafOB2W2JRRyWSxF0OKiqZKauEY=
+github.com/signoi/opencensus-exporter-instana v0.0.0-20200128065201-871aca720cf0/go.mod h1:MA1S2FP0JvOnK4LdhYGRU+wZ+zdR6Cfch4ey/3hiVf8=
 github.com/sirupsen/logrus v1.2.0/go.mod h1:LxeOpSwHxABJmUn/MG1IvRgCAasNZTLOkJPxbbu5VWo=
 github.com/sirupsen/logrus v1.4.2/go.mod h1:tLMulIdttU9McNUspp0xgXVQah82FyeX6MwdIuYE2rE=
 github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d/go.mod h1:OnSkiWE9lh6wB0YB77sQom3nweQdgAjqCqsofrRNTgc=
